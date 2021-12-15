@@ -15,13 +15,32 @@
     - Authentication with Google
 - User can create, edit and delete lists of movies
 - User can create its own categories for movies
+- User can list movies by category
 - User can share its list with other users
+
+## Future features
+
+- User can rate movies
+- List movies best rated
+- List movies saved by more users
+- Show quantity of users by country in a map
+- User can follow other users or specific lists
+- User can receive email notifications when a list he follows is updated
+- Mobile app
 
 ## Technologies
 
 - Front-end with React.js
+- AWS S3? Amplify?
 - Back-end with Spring
+- AWS Elastic Beanstalk
 - AWS RDS MySQL
 - Logging using the AWS tools
 - Authentication with Google
 - Unit testing with JUnit
+
+### APIs
+
+- http://www.omdbapi.com/
+- https://www.themoviedb.org/documentation/api
+- https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/
