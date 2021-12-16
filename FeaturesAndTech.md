@@ -17,16 +17,18 @@
 - User can create its own categories for movies
 - User can list movies by category
 - User can share its list with other users
+- User can rate movies
 
 ## Future features
 
-- User can rate movies
 - List movies best rated
 - List movies saved by more users
 - Show quantity of users by country in a map
 - User can follow other users or specific lists
 - User can receive email notifications when a list he follows is updated
 - Mobile app
+
+The features roadmap can be seen in the [GitHub repository issues](https://github.com/itamarc/mymovieslist/issues).
 
 ## Technologies
 
