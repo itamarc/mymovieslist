@@ -11,3 +11,5 @@ A Movies List project to study tech. This repository contains the documentation.
 ![Classes](MML-Classes.drawio.svg)
 
 <!-- This app will be hosted at: http://mymovieslist.appho.me -->
+
+<!-- I'll be using some free movie APIs from https://rapidapi.com/ -->
