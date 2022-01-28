@@ -221,6 +221,24 @@ Create a new movies list.
 }
 ```
 
+#### Returned data
+
+```json
+{
+    id: 1,
+    name: "My list",
+    created: "2022-01-01T00:00:00.000Z",
+    updated: "2022-01-02T00:00:00.000Z",
+    user: {
+        id: 1,
+        name: "Itamar",
+        email: "itamarc@gmail.com",
+        imageUrl: "https://avatars.githubusercontent.com/u/19577272?v=4",
+        registered: "2022-01-07T00:00:00.000Z"
+    }
+}
+```
+
 ### /movie
 
 Include a new movie in a list.
@@ -232,6 +250,22 @@ Include a new movie in a list.
     movies-list-id: 1,
     title: "The Polar Express",
     year: 2004,
+    categories: ["Animation"],
+    rank: 7,
+    watched: true
+}
+```
+
+### /movie/{id}
+
+Update a movie in a list.
+
+Can only update the categories, rank and watched fields.
+
+#### Data sent
+
+```json
+{
     categories: ["Animation"],
     rank: 7,
     watched: true
