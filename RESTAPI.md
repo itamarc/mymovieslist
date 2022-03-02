@@ -2,7 +2,7 @@
 
 ## GET Endpoints
 
-### /user
+### /user/me
 
 Return the data of the current logged in user, or nothing (in this case, will be redirected to the login page).
 
@@ -31,13 +31,13 @@ user: {
     [
         {
             id: 1,
-            name: "My list",
+            title: "My list",
             created: "2022-01-01T00:00:00.000Z",
             updated: "2022-01-02T00:00:00.000Z",
         },
         {
             id: 2,
-            name: "Sci-fi Movies",
+            title: "Sci-fi Movies",
             created: "2022-01-01T00:00:00.000Z",
             updated: "2022-01-02T00:00:00.000Z",
         },
@@ -57,7 +57,7 @@ Parameter:
 [
     {
         id: 1,
-        name: "My list",
+        title: "My list",
         created: "2022-01-01T00:00:00.000Z",
         updated: "2022-01-02T00:00:00.000Z",
         user: {
@@ -70,7 +70,7 @@ Parameter:
     },
     {
         id: 2,
-        name: "Sci-fi Movies",
+        title: "Sci-fi Movies",
         created: "2022-01-01T00:00:00.000Z",
         updated: "2022-01-02T00:00:00.000Z",
         user: {
@@ -83,7 +83,7 @@ Parameter:
     },
     {
         id: 3,
-        name: "Romance Movies",
+        title: "Romance Movies",
         created: "2022-01-01T00:00:00.000Z",
         updated: "2022-01-02T00:00:00.000Z",
         user: {
@@ -104,7 +104,7 @@ Return the basic data of a movies list.
 ```json
 {
     id: 1,
-    name: "My list",
+    title: "My list",
     created: "2022-01-01T00:00:00.000Z",
     updated: "2022-01-02T00:00:00.000Z",
     user: {
@@ -124,7 +124,7 @@ Return a movies list data, including the movies in the list.
 ```json
 {
     id: 1,
-    name: "My list",
+    title: "My list",
     created: "2022-01-01T00:00:00.000Z",
     updated: "2022-01-02T00:00:00.000Z",
     user: {
@@ -193,7 +193,8 @@ New user registration.
 {
     name: "Itamar",
     email: "itamarc@gmail.com",
-    imageUrl: "https://avatars.githubusercontent.com/u/19577272?v=4",
+    password: "123456",
+    imageUrl: "https://avatars.githubusercontent.com/u/19577272?v=4"
 }
 ```
 
@@ -211,13 +212,13 @@ New user registration.
 
 ### /movies-list
 
-Create a new movies list.
+Create a new movies list, associated with the authenticated user.
 
 #### Data sent
 
 ```json
 {
-    name: "My list",
+    title: "My list"
 }
 ```
 
@@ -226,7 +227,7 @@ Create a new movies list.
 ```json
 {
     id: 1,
-    name: "My list",
+    title: "My list",
     created: "2022-01-01T00:00:00.000Z",
     updated: "2022-01-02T00:00:00.000Z",
     user: {
@@ -239,7 +240,7 @@ Create a new movies list.
 }
 ```
 
-### /movie
+### /movies-list/{id}/movie
 
 Include a new movie in a list.
 
@@ -247,7 +248,6 @@ Include a new movie in a list.
 
 ```json
 {
-    movies-list-id: 1,
     title: "The Polar Express",
     year: 2004,
     categories: ["Animation"],
@@ -256,7 +256,7 @@ Include a new movie in a list.
 }
 ```
 
-### /movie/{id}
+### /movies-list/{id}/movie/{id}
 
 Update a movie in a list.
 
